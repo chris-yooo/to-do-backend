@@ -2,7 +2,7 @@ import React, {ChangeEvent, useState} from 'react';
 import '../styles/TaskModal.css'
 import {TaskModel} from "../Model/TaskModel";
 import axios from "axios";
-import {TaskStatus} from "../Model/TaskStatus";
+
 
 type ModalProps = {
     closeModal: () => void
