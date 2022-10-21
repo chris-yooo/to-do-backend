@@ -28,3 +28,8 @@ section {
     background-color: #c80000;
     padding: 2px 10px;
 }
+
+.cardButtons {
+    display: flex;
+    justify-content: center;
+}
