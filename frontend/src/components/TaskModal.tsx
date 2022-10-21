@@ -49,8 +49,8 @@ export default function TaskModal(props: ModalProps) {
                     <option value="DONE">Done</option>
                 </select>
                 <div className="buttons__lower">
-                    <button className='button' onClick={updateTask}>Update</button>
-                    <button className='button' onClick={props.closeModal}>Cancel</button>
+                    <button className='button hoverblue' onClick={updateTask}>Update</button>
+                    <button className='button hoverred' onClick={props.closeModal}>Cancel</button>
                 </div>
             </div>
         </div>

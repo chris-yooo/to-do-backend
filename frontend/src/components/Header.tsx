@@ -2,6 +2,7 @@ import React, {ChangeEvent, useState} from 'react';
 import "../styles/Header.css"
 import {NewTaskModel} from "../Model/NewTaskModel";
 import axios from "axios";
+import {FiSend} from "react-icons/fi"
 
 type HeaderProps = {
     fetchAllTasks: () => void
@@ -34,10 +35,11 @@ export default function Header(props: HeaderProps) {
         <header>
             <h1>Geile App 2022</h1>
             <form onSubmit={handleFormSubmit}>
-                <input onChange={handleInputChange}
+                <input className="inputTask"
+                        onChange={handleInputChange}
                        value={newTaskDescription}
-                       type="text" name="inputTaskDescription"/>
-                <button type='submit'>Add New Task</button>
+                       type="text" name="inputTaskDescription" placeholder="Add new task"/>
+                <button className="button hoverblue" type='submit'><FiSend size={18}/></button>
             </form>
         </header>
     );

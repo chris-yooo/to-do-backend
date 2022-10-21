@@ -6,9 +6,8 @@ section {
     padding: 0px 10px;
     /*margin: 0px 10px;*/
 }
-
-.card {
-
+section:hover {
+    background-color: #c4c4c4;
 }
 
 .taskHeader {
@@ -17,7 +16,8 @@ section {
 }
 
 .button {
-    border-radius: 15px;
+    background-color: transparent;
+    border: 0;
 }
 
 .margin {
@@ -32,4 +32,16 @@ section {
 .cardButtons {
     display: flex;
     justify-content: center;
+}
+
+.textsize {
+    font-size: 12px;
+}
+
+.hoverred:hover {
+    color: red;
+}
+
+.hoverblue:hover {
+    color: blue;
 }

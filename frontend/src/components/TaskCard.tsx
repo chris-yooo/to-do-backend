@@ -3,6 +3,8 @@ import "../styles/TaskCard.css"
 import {TaskModel} from "../Model/TaskModel";
 import TaskModal from "./TaskModal";
 import axios from "axios";
+import {AiOutlineArrowRight, AiOutlineArrowLeft} from "react-icons/ai"
+import {RiDeleteBin6Line} from "react-icons/ri"
 
 
 type TaskCardProps = {
@@ -61,17 +63,17 @@ export default function TaskCard(props: TaskCardProps) {
             {editModal && <TaskModal closeModal={closeModal} task={props.task} fetchAllTasks={props.fetchAllTasks}/>}
             <section>
                 <div className="taskHeader">
-                    <h4>Aufgabe:</h4>
-                    <button className="button margin red" onClick={handleDelete}>X</button>
+                    <h3>Aufgabe:</h3>
+                    <button className="button margin hoverred" onClick={handleDelete}><RiDeleteBin6Line size={18} /></button>
                 </div>
-                <p className="card card__description">{props.task.description}</p>
-                <p className="card card__status">Status: {props.task.status}</p>
+                <p className="card__description">{props.task.description}</p>
+                <p className="card__status">Status: {props.task.status}</p>
                 <div className="cardButtons">
                     {(props.task.status !== "OPEN") &&
-                        <button onClick={handleBackwards} className="button margin">Backward</button>}
-                    <button onClick={handleEdit} className="button margin">Edit</button>
+                        <button onClick={handleBackwards} className="button margin hoverblue"><AiOutlineArrowLeft size={18}/></button>}
+                    <button onClick={handleEdit} className="button margin textsize hoverblue">Edit</button>
                     {(props.task.status !== "DONE") &&
-                        <button onClick={handleAdvance} className="button margin">Advance</button>}
+                        <button onClick={handleAdvance} className="button margin hoverblue"> <AiOutlineArrowRight size={18}/> </button>}
                 </div>
             </section>
 
