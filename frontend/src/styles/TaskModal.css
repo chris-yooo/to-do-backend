@@ -1,0 +1,25 @@
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(193, 193, 193, 0.5 ) ;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    border: lightblue solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    Padding: 1.6rem 3.2rem;
+    border-radius: 1pc;
+    width: 400px;
+    height: 400px;
+    background-color: aliceblue;
+    color: black;
+}
