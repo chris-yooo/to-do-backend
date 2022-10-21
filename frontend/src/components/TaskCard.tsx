@@ -5,7 +5,6 @@ import TaskModal from "./TaskModal";
 import axios from "axios";
 
 
-
 type TaskCardProps = {
     task: TaskModel
     fetchAllTasks: () => void
