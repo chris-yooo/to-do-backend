@@ -66,9 +66,13 @@ export default function TaskCard(props: TaskCardProps) {
                 </div>
                 <p className="card card__description">{props.task.description}</p>
                 <p className="card card__status">Status: {props.task.status}</p>
-
-                <button onClick={handleEdit} className="button margin">Edit</button>
-
+                <div className="cardButtons">
+                    {(props.task.status !== "OPEN") &&
+                        <button onClick={handleBackwards} className="button margin">Backward</button>}
+                    <button onClick={handleEdit} className="button margin">Edit</button>
+                    {(props.task.status !== "DONE") &&
+                        <button onClick={handleAdvance} className="button margin">Advance</button>}
+                </div>
             </section>
 
         </>

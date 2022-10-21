@@ -40,7 +40,8 @@ export default function TaskModal(props: ModalProps) {
     return (
         <div className='modal'>
             <div className='modal-content'>
-                <input type='text' value={taskDescription} onChange={handleNewDescription}/>
+                <label>Task Description:</label>
+                <input className="inputEdit" type='text' value={taskDescription} onChange={handleNewDescription}/>
                 <label htmlFor="statusID">Set Task status:</label>
                 <select id="statusID" value={taskStatus} onChange={handleNewStatus} name="">
                     <option value="OPEN">Open</option>
